@@ -1,8 +1,8 @@
 # Kuopion yliopistollisen sairaalan posteri templaatti
 
-Templaatti perustuu Brent Thornen *posterdown* pakettiin ja on vapaasti käytettävissä ja muokattavissa.
+Templaatti perustuu Brent Thornen [`posterdown`](https://github.com/brentthorne/posterdown) pakettiin ja on vapaasti käytettävissä ja muokattavissa.
 
-Esimerkki posteri löytyy index.pdf tiedostosta.
+Esimerkki posteri löytyy `index.pdf` tiedostosta.
 
 ## Käyttöohjeet
 
