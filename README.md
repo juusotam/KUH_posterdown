@@ -8,6 +8,6 @@ Esimerkki posteri löytyy `index.pdf` tiedostosta.
 
 Kloonaa paketti koneellesi RStudioon ja muokkaa mieleiseksesi.
 
-Mukauttamiseen tarvittavat tiedot löytyvät kommentteina `index.Rdm` tiedoston alusta.
+Mukauttamiseen tarvittavat tiedot löytyvät kommentteina `index.Rmd` tiedoston alusta.
 
 PDF tiedosto muodostetaan komennolla `pagedown::chrome_print("index.Rmd")`.
