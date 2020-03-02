@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Posterin / abstraktin otsikko kirjoitetaan tähän. Jos se on kovin pitkä, jakautuu se kahdelle riville.</title>
+
+<script src="index_files/kePrint-0.0.1/kePrint.js"></script>
+
+
+
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
+<style>
+@page {
+size: 33.1in 46.8in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0px;
+padding: 0px;
+width: 33.1in;
+height: 46.8in;
+text-align: justify;
+font-size: 40px;
+line-height: 1.05;
+}
+/* RMarkdown Class Styles */
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: #3FA9F524;
+color: #3FA9F5;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+caption {
+margin-bottom: 10px;
+font-size: 20pt;
+font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #3FA9F520;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+  border-spacing: 0;
+  font-size: 40%;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1em;
+}
+table {
+  margin: auto;
+}
+th {
+  padding-left: 5mm;
+  padding-right: 5mm;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+padding-top: 0;
+}
+.references {
+font-size: 30px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 33.1in;
+height: calc(46.8in *  0.6325 );
+-webkit-column-count: 2; /* Chrome, Safari, Opera */
+-moz-column-count: 2; /* Firefox */
+column-count: 2;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+column-gap: 0;
+padding-left: 0cm;
+padding-right: 0cm;
+/* -webkit-column-rule-width: 50%;
+-moz-column-rule-width: 50%;
+column-rule-width: 50%; */
+-webkit-column-rule-style: none;
+-moz-column-rule-style: none;
+column-rule-style: none;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+background-color: #FFFFFF;
+font-family: Montserrat;
+margin-top: calc(46.8in *  0.25 );
+padding-top: 1em;
+padding-bottom: 1em;
+}
+span.citation {
+  color: #3FA9F5;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: #3FA9F5;
+}
+#title {
+font-size: 80px;
+text-align: left;
+margin: 0;
+line-height: 98%;
+border-bottom: 0;
+font-weight: normal;
+background: 0;
+}
+#author {
+color: #3FA9F5;
+margin: 0;
+line-height: 85%;
+font-size: 1em;
+}
+#affiliation {
+padding-top: 0.1em;
+color: #3E3E3E;
+font-style: italic;
+font-size: 0.5em;
+margin: 0;
+}
+sup {
+color: #FF4046;
+}
+.affiliation sup {
+font-size: 20px;
+}
+.author {
+text-align: left;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: #3FA9F5;
+margin: 0;
+line-height: 85%;
+font-size: 0.8em;
+text-align: left;
+}
+.outer h1, h2, h3, h4, h5, h6 {
+text-align: center;
+margin: 0;
+font-weight: bold;
+}
+.section h1 {
+  text-align:center;
+  padding-bottom:5px;
+  background:
+    linear-gradient(
+      to left,
+      #FFFFFF 1%,
+      #FFFFFF 20%,
+      #3FA9F575 33%,
+      #3FA9F5 50%,
+      #3FA9F575 66%,
+      #FFFFFF 80%,
+      #FFFFFF 99%
+    )
+    left
+    bottom
+    #FFFFFF
+    no-repeat;
+  background-size:100% 5px ;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p, .level2 {
+color: #3E3E3E;
+}
+.outer ol {
+padding-left: 8%;
+padding-right: 8%;
+text-align: left;
+}
+.main {
+width: 33.1in;
+height: calc(46.8in * 0.25);
+position: absolute;
+background-color: #3FA9F5;
+color: #ffffff90;
+font-family: Open Sans;
+background-image: linear-gradient(#3FA9F5 50%,#3FA9F5);
+}
+.main strong {
+color: #ffffff;
+}
+.main strong > sup {
+color: #ffffff;
+}
+.main sup {
+color: #ffffff90;
+}
+#main-img-left {
+width: 10%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+#main-img-center {
+width: 10%;
+left: calc(33.1in * 0.45);
+bottom: 0.5in;
+position: absolute;
+}
+#main-img-right {
+width: 10%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+.main p {
+font-size: 150px;
+font-family: Open Sans;
+text-align: center;
+margin: 0;
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+margin-left: 1em;
+}
+.fab {
+color: #00000030;
+font-size: 25px;
+}
+.twitter, i {
+color: #00000030;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #00000030;
+font-size: 35px;
+}
+.envelope {
+color: #00000030;
+font-size: 5px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 33.1in;
+height: 46.8in;
+padding: 0cm;
+}
+.main_bottom {
+width: 33.1in;
+height: calc(46.8in * 0.1);
+margin-top: calc(46.8in * 0.9);
+position: absolute;
+background-color: #3FA9F5;
+background-image: linear-gradient(#3FA9F5 10%, #3FA9F5);
+}
+.section {
+  padding-left: 10mm;
+  padding-right: 10mm;
+}
+span > #tab:mytable {
+  font-weight: bold;
+}
+.orcid img {
+  width: 3%;
+}
+.emphasis {
+  background-color: #008080;
+  color: #ffffff;
+  border: solid #0b2045 3mm;
+  margin: 1em;
+  padding-left: 0;
+  padding-right: 0;
+}
+.emphasis h1 {
+  font-weight: bold;
+  background: none;
+  background-color: #0b2045;
+  padding-bottom: 5mm;
+  padding-top: 1mm;
+  margin-top: -1mm;
+  margin-right: -1mm;
+  margin-left: -1mm;
+}
+.emphasis blockquote {
+  border: 0;
+}
+.emphasis ol {
+  padding: 0;
+  padding-left: 8%;
+  font-size: 100%;
+  font-weight: bold;
+}
+.emphasis p {
+  color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+
+<div class="column outer">
+<div class="section">
+<h1 id="title"><strong>Posterin / abstraktin otsikko kirjoitetaan tähän. Jos se on kovin pitkä, jakautuu se kahdelle riville.</strong></h1><br>
+<h3 id="author" class="author">
+
+Juuso N. Tamminen<sup> 1, 2, <a class="orcid" href="https://orcid.org/0000-0002-1680-3161"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup><br>
+<a class="twitter" href="https://mobile.twitter.com/juksu"><i class="fab fa-twitter"></i>&nbsp;&nbsp;@juksu</a><br>
+
+<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:juuso.tamminen@kuh.fi" class="email">juuso.tamminen@kuh.fi</a> <br>
+   </h3>
+
+<h5 id="author_extra", class="author_extra">
+ Ylilääkäri Ylermi<sup>1</sup>
+ Pertti Professori<sup>1</sup>
+ Tauno Dosentti<sup>1, 3</sup>
+</h5>
+
+
+<p id="affiliation" class="affiliation">
+<sup>1</sup> School of Medicine, University of Eastern Finland<br> <sup>2</sup> Department of Anesthesiology and Intensive Care, Kuopio University Hospital<br> <sup>3</sup> Department of Cardiology, Kuopio University Hospital
+</p>
+</div>
+
+<!-- Sisältö alkaa tästä. -->
+<div id="johdanto" class="section level1">
+<h1>Johdanto</h1>
+<p>Aikaisempi tutkimustieto osoittaa, että <strong><code>tämä tosi tärkeä juttu</code></strong> saattaa <strong><code>lisätä</code></strong> kiinnostusta tutkimuksen tekemiseen. Saataa myös olla että näin ei ole.</p>
+<p>Koska emme voi olla varmoja, päätimme tehdä tämän tutkimuksen. Tässä on yksi tosi tärkeä viite aiheeseen <span class="citation">(Turner et al. 2014)</span>.</p>
+</div>
+<div id="menetelmät" class="section level1">
+<h1>Menetelmät</h1>
+<ul>
+<li><p>Haastattelimme vuosina 2008-2015 Itä-Suomen yliopistosta valmistuneita lääketieteen opiskelijoita (<strong><code>N=1312</code></strong>).</p></li>
+<li><p>Kyselimme heiltä kaikenlaisia erikoisia kysymyksia erilaisiin aiheisiin liittyen. Useimmat heistä vastasivat todella mielellään tähän tärkeään tutkimukseemme.</p></li>
+</ul>
+</div>
+<div id="tulokset" class="section level1">
+<h1>Tulokset</h1>
+<p>Tässä on esitetty taulukko, jossa on viisi saraketta ja useita rivejä. Se sisältää tärkeää ja keskeistä tietoa, joka tukee tutkimuksen johtopäätelmiä.</p>
+<table class="table" style="font-size: 65px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;background-color: #CCCCCC !important;">
+</th>
+<th style="text-align:left;background-color: #CCCCCC !important;">
+</th>
+<th style="text-align:left;background-color: #CCCCCC !important;">
+Komplisoitumaton
+</th>
+<th style="text-align:left;background-color: #CCCCCC !important;">
+Readmissio tai MET-käynti
+</th>
+<th style="text-align:left;background-color: #CCCCCC !important;">
+p
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Potilaita yhteensä
+</td>
+<td style="text-align:left;width: 15%; ">
+N (%)
+</td>
+<td style="text-align:left;width: 30%; ">
+490 (90.2 %)
+</td>
+<td style="text-align:left;">
+53 (9.8 %)
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Ikä
+</td>
+<td style="text-align:left;width: 15%; ">
+Keskiarvo (SD)
+</td>
+<td style="text-align:left;width: 30%; ">
+63.7 (12.1)
+</td>
+<td style="text-align:left;">
+64.5 (12.4)
+</td>
+<td style="text-align:left;">
+0.66
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;vertical-align: top !important;" rowspan="2">
+Sukupuoli
+</td>
+<td style="text-align:left;width: 15%; ">
+Nainen
+</td>
+<td style="text-align:left;width: 30%; ">
+139 (28.4 %)
+</td>
+<td style="text-align:left;">
+16 (30.2 %)
+</td>
+<td style="text-align:left;">
+0.91
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 15%; ">
+Mies
+</td>
+<td style="text-align:left;width: 30%; ">
+351 (71.6 %)
+</td>
+<td style="text-align:left;">
+37 (69.8 %)
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;vertical-align: top !important;" rowspan="8">
+Toimenpide
+</td>
+<td style="text-align:left;width: 15%; ">
+AVR bio, stentillinen
+</td>
+<td style="text-align:left;width: 30%; ">
+147 (30.0 %)
+</td>
+<td style="text-align:left;">
+14 (26.4 %)
+</td>
+<td style="text-align:left;">
+0.20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 15%; ">
+AVR bio, stentitön
+</td>
+<td style="text-align:left;width: 30%; ">
+2 (0.4 %)
+</td>
+<td style="text-align:left;">
+1 (1.9 %)
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 15%; ">
+AVR mekaaninen
+</td>
+<td style="text-align:left;width: 30%; ">
+155 (31.6 %)
+</td>
+<td style="text-align:left;">
+15 (28.3 %)
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 15%; ">
+MVPL pelkkä rengas
+</td>
+<td style="text-align:left;width: 30%; ">
+3 (0.6 %)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 15%; ">
+MVPL valvuloplastia (+ rengas)
+</td>
+<td style="text-align:left;width: 30%; ">
+145 (29.6 %)
+</td>
+<td style="text-align:left;">
+16 (30.2 %)
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 15%; ">
+MVR bio
+</td>
+<td style="text-align:left;width: 30%; ">
+7 (1.4 %)
+</td>
+<td style="text-align:left;">
+3 (5.7 %)
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 15%; ">
+MVR mekaaninen
+</td>
+<td style="text-align:left;width: 30%; ">
+11 (2.2 %)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 15%; ">
+TVPL
+</td>
+<td style="text-align:left;width: 30%; ">
+20 (4.1 %)
+</td>
+<td style="text-align:left;">
+4 (7.5 %)
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Hengityslaitehoidon kesto teho-osastolla (tunteja)
+</td>
+<td style="text-align:left;width: 15%; ">
+Keskiarvo (SD)
+</td>
+<td style="text-align:left;width: 30%; ">
+8.1 (2.9)
+</td>
+<td style="text-align:left;">
+8.0 (2.5)
+</td>
+<td style="text-align:left;">
+0.81
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Diureesi tehohoidon aikana (millilitraa)
+</td>
+<td style="text-align:left;width: 15%; ">
+Keskiarvo (SD)
+</td>
+<td style="text-align:left;width: 30%; ">
+1925.1 (687.3)
+</td>
+<td style="text-align:left;">
+1802.3 (549.5)
+</td>
+<td style="text-align:left;">
+0.21
+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong><code>Merkittävät nostot</code></strong> löydöksistä on syytä esittää tässä omina bullet-pointteina.</p></li>
+<li><p>On hyvä korostaa, että <strong><code>eroja ei havaittu</code></strong> ryhmien välillä.</p></li>
+<li><p>Tämä voi johtua mm. siitä, että <strong><code>tutkimusaineisto oli liiaan pieni</code></strong> tämän muutoksen havaitsemiseen.</p></li>
+</ul>
+<p><img src="Figures/forest_plot.png" width="100%" style="display: block; margin: auto auto auto 0;" /></p>
+</div>
+<div id="johtopäätökset" class="section level1">
+<h1>Johtopäätökset</h1>
+<p>Tähän kirjoitetaan tutkimuksen keskeinen johtopäätös. On tärkeää <strong><code>korostaa assosiaatiota</code></strong> asioiden välillä. Tämä ei tietenkään pidä paikkaansa, mutta kirjoittelen tähän mitä sattuu, jotta saisin vähän sisältöä tähän posteriin.</p>
+<p>Voi myös olla, että <strong><code>kysymyksen asettelu</code></strong> oli väärä.</p>
+</div>
+<div id="sidonnaisuudet" class="section level1">
+<h1>Sidonnaisuudet</h1>
+<ul>
+<li><p>Juuso Tamminen on saanut palkkaa työnantajaltaan. Tällä palkalla hän rahoittaa harrastuksensa, mm. posteri templaattien puuhastelua.</p></li>
+<li><p>Muilla kirjoittajilla on todella paljon sidonnaisuuksia. Ylilääkäri Ylermi on saanut apurahaa (GWS4040112) Tosi Tärkeältä Lääketieteen säätiöltä. Lisäksi hän on toiminut luennoistijana Isolle Lääkeyritykselle.</p></li>
+</ul>
+<!-- Sisältö päättyy tähän. -->
+</div>
+<div id="kirjallisuus" class="section level1">
+<h1>Kirjallisuus</h1>
+<!-- Tähän tulee automaattisesti kirjallisuusluettelo käyttämiesi viitteiden perusteella. -->
+<!-- Tästä eteenpäin on tarkempia tyyliohjeita. #main-img muuttujilla säädetään alareunan logojen koko (prosenttia leveydestä). -->
+<style>
+#main-img-left {
+ width: 20%;
+}
+#main-img-center {
+ width: 10%;
+}
+#main-img-right {
+ width: 30%;
+}
+</style>
+<div id="refs" class="references">
+<div id="ref-turnerControlsWaterBalance2014">
+<p>Turner, Kevin W., Brent B. Wolfe, Thomas W. D. Edwards, Trevor C. Lantz, Roland I. Hall, and Guillaume Larocque. 2014. “Controls on Water Balance of Shallow Thermokarst Lakes and Their Relations with Catchment Characteristics: A Multi-Year, Landscape-Scale Assessment Based on Water Isotope Tracers and Remote Sensing in Old Crow Flats, Yukon (Canada).” <em>Global Change Biology</em> 20 (5): 1585–1603. <a href="https://doi.org/10.1111/gcb.12465">https://doi.org/10.1111/gcb.12465</a>.</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class="main">
+<p>Tähän kirjoitetaan posterin <strong>keskeisin löydös</strong>. Käytä lihavointia merkitsemään <strong>tärkeät</strong> sanat.</p>
+</div>
+<div class="main_bottom">
+<img id="main-img-left" src=Figures/KYS_mus_en_web_png.png>
+<img id="main-img-center" src=>
+<img id="main-img-right" src=Figures/UEF_eng_vaaka_1_black.png>
+</div>
+</div>
+
+
+
+</body>
+</html>
