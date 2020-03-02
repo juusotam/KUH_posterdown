@@ -8,5 +8,7 @@ Esimerkki posteri löytyy index.pdf tiedostosta.
 
 Kloonaa paketti koneellesi RStudioon ja muokkaa mieleiseksesi.
 
+PDF tiedosto muodostetaan komennolla `pagedown::chrome_print("index.Rmd")`.
+
 Kirjoitetaan myöhemmin...
 
